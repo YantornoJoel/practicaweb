@@ -11,9 +11,6 @@ import { __RouterContext } from 'react-router'
 
 
 
-
-
-
 export default class UserList extends Component {
 
 
@@ -114,7 +111,7 @@ export default class UserList extends Component {
                 </Fragment>
             )
         } else{
-            return(null)
+            return( null)
         }
     }
 }

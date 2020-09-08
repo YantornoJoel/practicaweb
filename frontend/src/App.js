@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import $ from 'jquery';
 import Popper from 'popper.js';
@@ -30,6 +30,8 @@ function App() {
 
       <Router>
 
+
+
         <Route
           render={props => (
             !localStorage.getItem('token') ?
@@ -47,7 +49,6 @@ function App() {
         />
 
         <Route path="/api/" exact component={Index} />
-        <Route path="/api/product/:id" exact component={Product} />
         <Route path="/api/productlist" exact component={ProductList} />
         <Route path="/api/createuser" exact component={CreateUser} />
         <Route path="/api/signin" exact component={Login} />
@@ -58,10 +59,13 @@ function App() {
 
         <Route path="/admin/user" component={SeccionAdmin} />
 
-       
-          <Route path="/admin/user/list" exact component={UserList} />
-          <Route path="/admin/user/perfil" exact component={SeccionAdminPerfil} />
-       
+
+        <Route path="/admin/user/list" exact component={UserList} />
+        <Route path="/admin/user/perfil" exact component={SeccionAdminPerfil} />
+        <Route path="/admin/user/create/product/:id" exact component={Product} />
+        <Route path="/admin/user/list/product" exact component={ProductList} />
+
+
       </Router>
 
     </Fragment>

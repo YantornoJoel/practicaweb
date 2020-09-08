@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import axiosCreate from './axiosCreate'
 import '../assets/style.css'
+
+import Login from './LoginAdmin'
 
 export default class SeccionAdmin extends Component {
     state = {
@@ -120,12 +122,13 @@ export default class SeccionAdmin extends Component {
                         </center>
 
                         <div className="menu-lateral">
-                        <Link to="/admin/user/list"><i class="fas fa-users"></i><span>Clientes</span></Link>
-                        <Link to="/admin/user/product"><i class="fas fa-store-alt"></i><span>Productos</span></Link>
-                        <Link to="/admin/user/perfil"><i class="far fa-address-book" title="Perfil"></i><span>Perfil</span></Link>                        <a href="#"><i class="fas fa-envelope-open" title="Contacto"></i><span>Contacto</span></a>
+                        <Link to="/admin/user/list"><i class="fas fa-users" title="Clientes"></i><span>Clientes</span></Link>
+                        <Link to="/admin/user/list/product"><i class="fas fa-store-alt" title="Productos"></i><span>Productos</span></Link>
+                        <Link to="/admin/user/perfil"><i class="far fa-address-book" title="Perfil"></i><span>Perfil</span></Link>
+                        <a href="#"><i class="fas fa-envelope-open" title="Contacto"></i><span>Contacto</span></a>
                         <a href="#"><i class="fas fa-info-circle" title="Acerca de"></i><span>Acerca de</span></a>
                         <a href="#"><i class="fas fa-sliders-h" title="Configuraciones"></i><span>Opciones</span></a>
-                        <Link onClick={() => {localStorage.removeItem('token')}} to="/admin"><i class="fas fa-sign-out-alt"></i><span>Cerrar sesión</span></Link>
+                        <Link onClick={() => {localStorage.removeItem('token')}} to="/admin"><i class="fas fa-sign-out-alt" title="Cerrar Sesión"></i><span>Cerrar sesión</span></Link>
                         </div>
 
                         
@@ -142,7 +145,10 @@ export default class SeccionAdmin extends Component {
             )
         } else {
             return (
-                <Link to="/api">Error, no inicio sesión como administrador</Link>
+                // <Link to="/api">Error, no inicio sesión como administrador</Link>
+                <Redirect
+            from="/"
+            to="/admin" />
             )
         }
     }

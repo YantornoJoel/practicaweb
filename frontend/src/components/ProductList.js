@@ -52,6 +52,7 @@ export default class Index extends Component {
   render() {
     if(this.state.token){
     return (
+      <div className="content">
       <div className="card fondo  container mx-auto">
         
 
@@ -60,7 +61,7 @@ export default class Index extends Component {
           
           <h2 className=" subheader mb-5 mt-5 ">
               Todos los productos
-              <Link className="float-right btn btn-success btn-sm" to="/api/product">Añadir producto</Link>
+              <Link className="float-right btn btn-success btn-sm" to="/admin/user/create/product/:id">Añadir producto</Link>
           </h2>
           
           
@@ -86,7 +87,7 @@ export default class Index extends Component {
                                       onClick= {() => this.deleteArticle(article._id) }>
                                         X
                                   </button>
-                                  <Link to={"/api/product/" + article._id}> 
+                                  <Link to={"/admin/user/create/product/" + article._id}> 
                      <img src={iconedit} className="iconoedi" id="iconedit" alt="Imagen"/>    
                                    </Link>
               </div>
@@ -111,7 +112,7 @@ export default class Index extends Component {
 
       
     </div>
-   
+    </div>
     );
   }else{
     return(

@@ -58,7 +58,7 @@ export default class article extends Component {
     
     console.log(this.state)
 
-    this.props.history.push("/api/productlist");
+    this.props.history.push("/admin/user/list/product");
   };
 
   onInputChange = (e) => {
@@ -77,8 +77,9 @@ export default class article extends Component {
 
   render() {
     return (
-      <div className="row p-4">
-        <div  className="card col-md-4 mx-auto">
+      <div className="content">
+      
+        <div  className="card col-md-9 mx-auto product-add">
          
             <h1 className="mt-4 text-center card-header mb-4">Subir Producto</h1>
             <form className="form-group d-inline-block " onSubmit={this.onSubmit}>
@@ -133,6 +134,7 @@ export default class article extends Component {
       
         </div>
      
+      
       </div>
     );
   }
