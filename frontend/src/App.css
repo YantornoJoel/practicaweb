@@ -1,0 +1,383 @@
+body{
+  background: #dfdfdf;
+  font-family: "Roboto", sans-serif;
+ 
+}
+.fondo{
+  background: #dfdfdf;
+}
+
+#btn-delete{
+  float: right;
+  border-radius: 20%;  
+}
+
+.login {
+  border-radius: 0%;
+  background: #dfdfdf;
+  
+}
+
+.login-menu {
+  border-radius: 1%;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+.perfil{
+  border-radius: 5%;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  background: rgb(50, 74, 78);
+}
+
+.color-fondo-perfil{
+  background: rgb(85, 84, 84);
+}
+
+.btn-perfil-delete{
+  margin-left: 320px;
+  margin-top: 20px;
+  background: rgb(211, 10, 10);
+  color: #eee;
+}
+.btn-perfil-delete:hover{
+  background: rgb(241, 18, 18);
+  color: rgb(230, 230, 230);
+  border: rgb(46, 45, 45) 1px solid;
+  transform: scale(1.1);
+}
+
+.linea-datos {
+  height: 4px;
+  width: 70%;
+  margin-top: -4px;
+  background-color: rgb(61, 60, 60);
+}
+
+.nav-user:hover{
+  background: rgb(46, 44, 44);
+  color: rgb(255, 255, 255) ;
+}
+
+
+
+
+#tarjeta{
+  border-radius: 10%;
+}
+
+
+.center
+{
+    width: 75%;
+    margin: 0px auto;
+}
+
+
+#content
+{
+    /* width: 70%;
+    float: left;
+    min-height: 650px;
+    margin-right: 20px; */
+}
+
+.subheader
+{
+    font-size: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.article-detail .image-wrap
+{
+    float: none;
+    width: 100%;
+    height: 450px;
+    margin-top: 1cm;
+    
+}
+
+.article-detail .image-wrap img
+{
+    width: 100%;
+    height: auto;
+}
+.article-detail .subheader
+{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border: none;
+}
+#iconedit{
+  float: right;
+  margin-top: -107px;
+  margin-right: 55px;
+  height: 50px;
+  width: 20px;
+}
+
+
+.funciones Link{
+  margin: 10cm;
+  
+}
+
+#date{
+  height: 20px;
+  margin-right: 190px;
+}
+
+
+
+
+#btn-delete{
+  float: right;
+  margin-top: -100px;
+}
+
+
+#btn-edit
+{
+  background:white;
+  /*background: linear-gradient(90deg, rgb(253, 253, 253) 0%,
+  rgb(136, 134, 133) 35%, rgb(255, 255, 255) 100%);*/
+  color:black;
+  border-radius: 10px ;
+  border-color: rgb(1, 141, 255);
+  border-width: 1.5px;
+  border-style: solid;
+  float: left;
+  height: 10px;
+}
+
+.btn-delete
+{
+  background:white;
+  /*background: linear-gradient(90deg, rgb(253, 253, 253) 0%,
+  rgb(136, 134, 133) 35%, rgb(255, 255, 255) 100%);*/
+  color:black;
+  border-radius: 10px ;
+  border-color: #d80303;
+  border-width: 1.5px;
+  border-style: solid;
+}
+#btn-delete{
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+#btn-deletee{
+  float: right;
+}
+
+.btn-delete:hover
+{
+  background: rgb(255, 1, 1);
+  color: white;
+}
+
+#btn-edit:hover
+{
+  background: rgb(1, 141, 255);
+  color: white;
+}
+
+
+
+
+.clearfix
+{
+    clear: both;
+    float: none;
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------
+ */
+
+
+
+
+ .body-admin{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("./logos/bosque.jpg");
+  background-size: cover;
+}
+
+.form{
+  background: #000;
+  z-index: 1;
+  font-family: "Candara", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 0 45px 30px 45px;
+  text-align: center;
+  border-radius: 50px;
+  opacity: 0.9;
+}
+
+.form-admin-create{
+  width: 1000px;
+}
+
+.form h2{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form .icons i{
+  color: #fff;
+  font-size: 25px;
+  margin: 0 30px 30px 30px;
+  transition: 0.8s;
+  transition-property: color, transform;
+}
+
+.form .icons i:hover{
+  color: rgb(0, 153, 255);
+  transform: scale(1.3);
+}
+
+.form input{
+  outline: 0;
+  background: none;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  width: 265px;
+  margin-bottom: 30px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 2.5px solid rgb(0, 153, 255);
+  border-radius: 25px;
+  transition: 0.5s;
+  transition-property: width;
+}
+
+.form input:hover{
+  width: 300px;
+
+ 
+}
+
+.form input:focus{
+  width: 300px;
+
+}
+
+.form button{
+  outline: 0;
+  background: none;
+  color:#fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 150px;
+  padding: 15px;
+  border: 2.5px solid #00ff62;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: background, transform;
+}
+
+.form button:hover, .form button:active, .form button:focus{
+  background: #05c950;
+  border: 2px solid black;
+  transform: scale(1.1);
+}
+
+.form .options{
+  color: #bbb;
+  font-size: 14px;
+  margin: 20px 0 0;
+}
+
+.form .options a{
+  text-decoration: none;
+  color: #06C5CF;
+}
+
+.bottom-aligned {
+  display: flex;
+  align-items: flex-end;
+}
+
+.fondo-listado-cliente{
+  background: rgb(151, 145, 151);
+  border-radius: 30px;
+}
+.btn-listado-cliente{
+
+  /* display: flex; */
+  border-radius: 10px;
+}
+
+.listado-usuario-cliente{
+  display: flex;
+  margin-bottom: 30px;
+  
+}
+.listado-usuario-cliente #list-nombre{
+  margin-left: 20px;
+  min-width: 220px;
+  max-width: 220px;
+}
+
+.listado-usuario-cliente #list-apellido{
+  
+  min-width: 220px;
+  max-width: 220px;
+}
+
+.listado-usuario-cliente #list-email{
+  
+  min-width: 270px;
+  max-width: 270px;
+}
+.listado-usuario-cliente #list-telefono{
+  min-width: 180px;
+  max-width: 180px;
+}
+.listado-usuario-cliente #list-boton{
+  min-width: 170px;
+  max-width: 170px;
+}
+
+.btn-admin-listuser-delete{
+  
+  margin-left: -20px;
+  margin-top: -19px;
+  font-size:  13px;
+  border: 1px solid red;
+  height: 40px;
+  transform: scale(0.9);
+  /* background: rgb(211, 10, 10); */
+  color: black;
+}
+.btn-admin-listuser-delete:hover{
+  background: rgb(241, 18, 18);
+  color: rgb(230, 230, 230);
+  border: rgb(46, 45, 45) 1.2px solid;
+  transform: scale(1.0);
+}
+.linea-hr-admin{
+  margin-left: -1060px;
+  margin-top: 32px;
+  min-height: 1px;
+  max-height: 2px;
+  width: 1100px;
+  border: 1px solid rgb(196, 196, 196)
+}
+
