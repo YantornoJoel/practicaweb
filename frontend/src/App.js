@@ -19,10 +19,10 @@ import ProductList from './components/ProductList'
 import Perfil from './components/Perfil'
 import LoginAdmin from './components/LoginAdmin'
 import CreateAdmin from './components/CreateAdmin'
-
-
 import SeccionAdmin from './components/SeccionAdmin'
 import SeccionAdminPerfil from './components/SeccionAdminPerfil'
+import Start from './components/Start'
+import Configuracion from './components/Configuracion'
 
 function App() {
   return (
@@ -30,8 +30,9 @@ function App() {
 
       <Router>
 
+      <Route path="/" exact component={Start} />
 
-
+        {/* RUTAS CLIENTE */}
         <Route
           render={props => (
             !localStorage.getItem('token') ?
@@ -39,7 +40,6 @@ function App() {
               <Route path="/api" component={NavUser} />
           )}
         />
-
         <Route
           render={props => (
             localStorage.getItem('token') ?
@@ -47,24 +47,23 @@ function App() {
               <Route Route exact path="/api" />
           )}
         />
-
-        <Route path="/api/" exact component={Index} />
+        <Route path="/api" exact component={Index} />
         <Route path="/api/productlist" exact component={ProductList} />
         <Route path="/api/createuser" exact component={CreateUser} />
         <Route path="/api/signin" exact component={Login} />
         <Route path="/api/perfil" exact component={Perfil} />
+
+
+
+            {/* RUTAS ADMIN */}
         <Route path="/admin" exact component={LoginAdmin} />
         <Route path="/create/admin" exact component={CreateAdmin} />
-
-
         <Route path="/admin/user" component={SeccionAdmin} />
-
-
         <Route path="/admin/user/list" exact component={UserList} />
         <Route path="/admin/user/perfil" exact component={SeccionAdminPerfil} />
         <Route path="/admin/user/create/product/:id" exact component={Product} />
         <Route path="/admin/user/list/product" exact component={ProductList} />
-
+        <Route path="/admin/user/configuracion" exact component={Configuracion} />
 
       </Router>
 

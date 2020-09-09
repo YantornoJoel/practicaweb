@@ -127,7 +127,7 @@ export default class SeccionAdmin extends Component {
                         <Link to="/admin/user/perfil"><i class="far fa-address-book" title="Perfil"></i><span>Perfil</span></Link>
                         <a href="#"><i class="fas fa-envelope-open" title="Contacto"></i><span>Contacto</span></a>
                         <a href="#"><i class="fas fa-info-circle" title="Acerca de"></i><span>Acerca de</span></a>
-                        <a href="#"><i class="fas fa-sliders-h" title="Configuraciones"></i><span>Opciones</span></a>
+                        <Link to="/admin/user/configuracion"><i class="fas fa-sliders-h" title="Configuraciones"></i><span>Opciones</span></Link>
                         <Link onClick={() => {localStorage.removeItem('token')}} to="/admin"><i class="fas fa-sign-out-alt" title="Cerrar Sesión"></i><span>Cerrar sesión</span></Link>
                         </div>
 

@@ -5,6 +5,21 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
+
+.modooscuro-body {
+  background-color: rgb(240, 240, 240);
+  color: rgb(0, 0, 0)
+}
+
+.modooscuro-sidebar{
+  color: #000000;
+  /* background: rgb(170, 54, 54);  */
+}
+.modooscuro-sidebar:hover{
+  color: green;
+}
+
+
 header{
     /* position: fixed;  */
     background: #121316;
@@ -31,7 +46,7 @@ header{
   
   
   .sidebar{
-   background: #2F323A;
+   /* background: #2F323A; */
        background: -webkit-linear-gradient(left, #5053b3, #9b1cd1) ;
 
     margin-top: 0px;
@@ -78,6 +93,7 @@ header{
   }
   
   .sidebar #usuario{
+    /* color:rgb(206, 205, 205); */
     font-size: 100px;
   }
   
@@ -179,9 +195,60 @@ header{
 
 
 
+.start-cards{
+  margin-top: 100px;
+  margin-left: 140px;
+  /* margin-right: 20%; */
+  /* margin-right: 220px */
+}
+
+.start-card-item{
+  margin-right: 60px;
+  background: #c2bfbf ;
+  
+  border-radius: 20px;
+  /* filter: brightness(60%); */
+  
+}
+.start-card-item:hover{
+  /* filter: brightness(100%); */
+  cursor: pointer;
+  transform: scale(1.1);
+  
+}
+
+.start-card-item #start-link:hover{
+  text-decoration: none;
+  filter: brightness(120%);
+}
 
 
+.start-card-item #icono-herramienta{
+  margin-left: -350px;
+  margin-top: 30px;
+  font-size: 50px;
+  color: rgb(42, 110, 99);
 
+}
+
+.start-card-item #icono-usuario{
+  font-size: 200px;
+  min-height: 230px;
+  min-width: 400px;
+  color: rgb(42, 110, 99);
+
+}
+
+.start-card-item p{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(42, 110, 99);
+
+}
+
+.start-card-item h3{
+  color: black
+}
 
 
 

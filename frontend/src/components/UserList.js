@@ -76,14 +76,13 @@ export default class UserList extends Component {
         if (localStorage.getItem('borrarusuario')) {
             return (
                 <Fragment>
-                    {/* <div className=" container  mx-auto mt-5 "  > */}
                     <div className="content">
                         <h1 className="text-center">Lista de usuarios</h1>
                         <hr className="mb-5" />
-                        <div className="  container">
+                        <div className="  ">
                             {this.state.users.map(user => (
                                 
-                                <div className="listado-usuario-cliente" key={user._id}>
+                                <div className="listado-usuario-cliente " key={user._id}>
                                     <h6 id="list-nombre">
                                         {user.name}
                                     </h6>
@@ -106,7 +105,6 @@ export default class UserList extends Component {
 
                         </div>
                     </div>
-
 
                 </Fragment>
             )
