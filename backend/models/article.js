@@ -8,6 +8,8 @@ var ArticleSchema= Schema ({
                     content: String,
                     date: {type: Date, default: Date.now},
                     image: String,
+                    precio: String,
+                    marca: String
                     
 },   {timestamps: true}
 );

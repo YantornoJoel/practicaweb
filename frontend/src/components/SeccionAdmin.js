@@ -53,21 +53,14 @@ export default class SeccionAdmin extends Component {
             return (
                 <Fragment>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"></link>
-
-
-
                     <input type="checkbox" id="check" />
-
-
-
-
                     <nav className="navbar navbar-expand-lg navbar-dark  nav-admin">
                         <div className="container">
-                            <div class="left_area">
+                            <div className="left_area">
                                 <h3>
                                     <span>{this.state.email}</span>
-                                    <label for="check">
-                                        <i class="fas fa-bars  ml-3" id="nav-label-icon"></i>
+                                    <label htmlFor="check">
+                                        <i className="fas fa-bars  ml-3" id="nav-label-icon"></i>
                                     </label>
                                 </h3>
                             </div>
@@ -85,11 +78,6 @@ export default class SeccionAdmin extends Component {
                                     </li>
                                 </ul>
                                 <ul className="navbar-nav ml-auto">
-                                    {/* <li className="nav">
-                                    <Link className="nav-link" to="/perfil">{this.state.email}</Link>
-                                </li> */}
-
-
                                 </ul>
                             </div>
                         </div>
@@ -114,27 +102,27 @@ export default class SeccionAdmin extends Component {
 
 
 
-                    <div class="sidebar">
+                    <div className="sidebar">
 
                         <center className="mb-5">
-                            <img src="" /> <i class="fas fa-user-circle" id="usuario"></i>
+                            <img src="" /> <i className="fas fa-user-circle" id="usuario"></i>
 
                         </center>
 
                         <div className="menu-lateral">
-                        <Link to="/admin/user/list"><i class="fas fa-users" title="Clientes"></i><span>Clientes</span></Link>
-                        <Link to="/admin/user/list/product"><i class="fas fa-store-alt" title="Productos"></i><span>Productos</span></Link>
-                        <Link to="/admin/user/perfil"><i class="far fa-address-book" title="Perfil"></i><span>Perfil</span></Link>
-                        <a href="#"><i class="fas fa-envelope-open" title="Contacto"></i><span>Contacto</span></a>
-                        <a href="#"><i class="fas fa-info-circle" title="Acerca de"></i><span>Acerca de</span></a>
-                        <Link to="/admin/user/configuracion"><i class="fas fa-sliders-h" title="Configuraciones"></i><span>Opciones</span></Link>
-                        <Link onClick={() => {localStorage.removeItem('token')}} to="/admin"><i class="fas fa-sign-out-alt" title="Cerrar Sesión"></i><span>Cerrar sesión</span></Link>
+                        <Link to="/admin/user/list"><i className="fas fa-users" title="Clientes"></i><span>Clientes</span></Link>
+                        <Link to="/admin/user/list/product"><i className="fas fa-store-alt" title="Productos"></i><span>Productos</span></Link>
+                        <Link to="/admin/user/perfil"><i className="far fa-address-book" title="Perfil"></i><span>Perfil</span></Link>
+                        <Link to="/admin/user/contacto"><i className="fas fa-envelope-open" title="Contacto"></i><span>Contacto</span></Link>
+                        <Link to="/admin/user/acercade"><i className="fas fa-info-circle" title="Acerca de"></i><span>Acerca de</span></Link>
+                        <Link to="/admin/user/configuracion"><i className="fas fa-sliders-h" title="Configuraciones"></i><span>Opciones</span></Link>
+                        <Link onClick={() => {localStorage.removeItem('token')}} to="/admin"><i className="fas fa-sign-out-alt" title="Cerrar Sesión"></i><span>Cerrar sesión</span></Link>
                         </div>
 
                         
                     </div>
 
-                    <div class="content">
+                    <div className="content">
 
 
 

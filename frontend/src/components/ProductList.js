@@ -15,7 +15,8 @@ export default class Index extends Component {
   }
 
   async componentDidMount() {
-    this.getArticles()     
+    this.getArticles()    
+   
 
       const token = localStorage.getItem('token')
       console.log("El valor del token obtenido es: ", token)
@@ -40,6 +41,8 @@ export default class Index extends Component {
     console.log(res.data.articles)
     
   }
+
+
 
 
   deleteArticle = async (id) =>{
@@ -79,7 +82,9 @@ export default class Index extends Component {
               </div>
               <h2 className="display-block ">{article.title}</h2>
               <h6 className="display-block">{article.content}</h6>
-
+              <h5 className="display-block">{article.marca}</h5>
+              <h5 className="display-block">{article.precio}</h5>
+              <h5>{article.image}</h5>
               <div className="funciones" >
             <button 
                                       className="btn btn-danger"
@@ -139,8 +144,10 @@ export default class Index extends Component {
               </div>
               <h2 className="display-block ">{article.title}</h2>
               <h6 className="display-block">{article.content}</h6>
+              <h5 className="display-block">{article.marca}</h5>
+              <h5 className="display-block">{article.precio}</h5>
               <span className="date d-block float-right">{format(article.date)}</span>
-              <Link to={"/productdate/" + article._id} className="btn btn-dark mt-2">Ver más</Link>
+              <Link to={"/api/article/" + article._id} className="btn btn-primary mt-2">Reservar</Link>
               <div className="clearfix"></div>
             </article>
             <hr/>

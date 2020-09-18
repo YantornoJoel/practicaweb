@@ -11,7 +11,8 @@ const UserSchema = Schema ({
     telefono: {type: String},
     pais: {type: String},
     provincia: {type: String},
-    documento: {type: String}
+    documento: {type: String},
+    cp: {type: String}
 
 })
 

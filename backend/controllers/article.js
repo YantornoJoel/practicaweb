@@ -20,6 +20,8 @@ var controller = {
         var validate_title= !validator.isEmpty(params.title);
         var validate_content= !validator.isEmpty(params.content);
         var validate_date= !validator.isEmpty(params.date)
+        var validate_precio = !validator.isEmpty(params.precio)
+        var validate_marca = !validator.isEmpty(params.marca)
     }catch(err){
                 return res.status(200).send({
                 status: "error",
@@ -27,7 +29,7 @@ var controller = {
                                             });
                 }
 
-    if(validate_title && validate_content && validate_date){
+    if(validate_title && validate_content && validate_date && validate_marca && validate_precio){
     //Crear el objeto a guardar
         var article= new Article();
 
@@ -35,6 +37,8 @@ var controller = {
         article.title= params.title;
         article.content= params.content;
         article.date= params.date;
+        article.marca = params.marca;
+        article.precio = params.precio;
         article.image= null;
 
         //Guardar en la base de datos
@@ -127,13 +131,15 @@ update: (req, res) => {
     try{
         var validate_title= !validator.isEmpty(params.title);
         var validate_content= !validator.isEmpty(params.content);
+        var validate_marca = !validator.isEmpty(params.marca)
+        var validate_precio = !validator.isEmpty(params.precio)
     } catch (err) {
         return res.status(200).send({
             status: "Error",
             message: "Faltan datos por enviar",
         });
     }
-    if(validate_title && validate_content){
+    if(validate_title && validate_content && validate_precio & validate_marca){
         //Find and update
         Article.findByIdAndUpdate(
             {_id: articleId}, params,

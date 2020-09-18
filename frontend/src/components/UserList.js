@@ -79,9 +79,8 @@ export default class UserList extends Component {
                     <div className="content">
                         <h1 className="text-center">Lista de usuarios</h1>
                         <hr className="mb-5" />
-                        <div className="  ">
+                        <div className="">
                             {this.state.users.map(user => (
-                                
                                 <div className="listado-usuario-cliente " key={user._id}>
                                     <h6 id="list-nombre">
                                         {user.name}
@@ -89,7 +88,7 @@ export default class UserList extends Component {
                                     <h6 id="list-apellido">
                                         {user.apellido}
                                     </h6>
-                                   
+
                                     <h6 id="list-email">{user.email}</h6>
                                     <h6 id="list-telefono">{user.telefono}</h6>
                                     <button
@@ -98,7 +97,7 @@ export default class UserList extends Component {
                                         onClick={() => this.deleteUser(user._id)}>
                                         Borrar usuario
                                            </button>
-                                    <h1 className="linea-hr-admin"></h1> 
+                                    <h1 className="linea-hr-admin"></h1>
                                 </div>
 
                             ))}
@@ -108,8 +107,8 @@ export default class UserList extends Component {
 
                 </Fragment>
             )
-        } else{
-            return( null)
+        } else {
+            return (null)
         }
     }
 }

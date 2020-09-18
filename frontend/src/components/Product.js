@@ -12,6 +12,8 @@ export default class article extends Component {
     title: "",
     content: "",
     _id: "",
+    marca: "",
+    precio: "",
     editing: false,
     date: new Date(),
     
@@ -29,6 +31,8 @@ export default class article extends Component {
         title: res.data.article.title,
         content: res.data.article.content,
         date: new Date(res.data.article.date),
+        marca: res.data.article.marca,
+        precio: res.data.article.precio,
         editing: true,
         _id: this.props.match.params.id,
 
@@ -43,8 +47,8 @@ export default class article extends Component {
       title: this.state.title,
       content: this.state.content,
       date: this.state.date,
-
-      
+      marca: this.state.marca,
+      precio: this.state.precio      
     };
 
     if (!this.state.editing) {
@@ -58,7 +62,7 @@ export default class article extends Component {
     
     console.log(this.state)
 
-    this.props.history.push("/admin/user/list/product");
+    this.props.history.push("/admin/user/upload/:id");
   };
 
   onInputChange = (e) => {
@@ -105,6 +109,32 @@ export default class article extends Component {
                   name="content"
                   onChange={this.onInputChange}
                   value={this.state.content}
+                  required
+                />
+              </div>
+              {<br />}
+              <div className="form-group ">
+                <label>Marca</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Marca"
+                  name="marca"
+                  onChange={this.onInputChange}
+                  value={this.state.marca}
+                  required
+                />
+              </div>
+              {<br />}
+              <div className="form-group ">
+                <label>Precio</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Precio"
+                  name="precio"
+                  onChange={this.onInputChange}
+                  value={this.state.precio}
                   required
                 />
               </div>

@@ -23,6 +23,12 @@ import SeccionAdmin from './components/SeccionAdmin'
 import SeccionAdminPerfil from './components/SeccionAdminPerfil'
 import Start from './components/Start'
 import Configuracion from './components/Configuracion'
+import SeccionContacto from './components/SeccionContacto'
+import SeccionAcercade from './components/SeccionAcercade'
+import UploadImage from './components/UploadImage'
+import Article from './components/Article'
+
+
 
 function App() {
   return (
@@ -52,7 +58,7 @@ function App() {
         <Route path="/api/createuser" exact component={CreateUser} />
         <Route path="/api/signin" exact component={Login} />
         <Route path="/api/perfil" exact component={Perfil} />
-
+        <Route path="/api/article/:id" exact component={Article} />
 
 
             {/* RUTAS ADMIN */}
@@ -64,6 +70,9 @@ function App() {
         <Route path="/admin/user/create/product/:id" exact component={Product} />
         <Route path="/admin/user/list/product" exact component={ProductList} />
         <Route path="/admin/user/configuracion" exact component={Configuracion} />
+        <Route path="/admin/user/contacto" exact component={SeccionContacto} />
+        <Route path="/admin/user/acercade" exact component={SeccionAcercade} />
+        <Route path="/admin/user/upload/:id" exact component={UploadImage} />
 
       </Router>
 

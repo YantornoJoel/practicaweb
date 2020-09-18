@@ -16,7 +16,8 @@ export default class CreateUser extends Component {
         confirmpassword: "",
         pais: "",
         provincia: "",
-        documento: ""
+        documento: "",
+        cp: ""
     };
 
 
@@ -32,7 +33,8 @@ export default class CreateUser extends Component {
             telefono: this.state.telefono,
             pais: this.state.pais,
             provincia: this.state.provincia,
-            documento: this.state.documento
+            documento: this.state.documento,
+            cp: this.state.cp
 
         };
 
@@ -100,6 +102,11 @@ export default class CreateUser extends Component {
                                     <div className="form-group">
                                         <input type="text" className="form-control" name="provincia" placeholder="Provincia" onChange={this.onInputChange}
                                             value={this.state.provincia}
+                                            required />
+                                    </div>
+                                    <div className="form-group">
+                                        <input type="text" className="form-control" name="cp" placeholder="Código Postal" onChange={this.onInputChange}
+                                            value={this.state.cp}
                                             required />
                                     </div>
                                     <div className="form-group">

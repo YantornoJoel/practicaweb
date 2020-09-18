@@ -19,15 +19,16 @@ var controller = {
         var params = req.body;
         //Validar datos(validator, para controlar excepciones, errores)
         try {
-            var validate_name = !validator.isEmpty(params.name);
-            var validate_apellido = !validator.isEmpty(params.apellido);
-            var validate_email = !validator.isEmpty(params.email);
-            var validate_password = !validator.isEmpty(params.password)
-            var validate_confirmpassword = !validator.isEmpty(params.confirmpassword)
-            var validate_telefono = !validator.isEmpty(params.telefono)
-            var validate_pais = !validator.isEmpty(params.pais)
-            var validate_provincia = !validator.isEmpty(params.provincia)
-            var validate_documento = !validator.isEmpty(params.documento)
+            var validate_name               = !validator.isEmpty(params.name);
+            var validate_apellido           = !validator.isEmpty(params.apellido);
+            var validate_email              = !validator.isEmpty(params.email);
+            var validate_password           = !validator.isEmpty(params.password)
+            var validate_confirmpassword    = !validator.isEmpty(params.confirmpassword)
+            var validate_telefono           = !validator.isEmpty(params.telefono)
+            var validate_pais               = !validator.isEmpty(params.pais)
+            var validate_provincia          = !validator.isEmpty(params.provincia)
+            var validate_documento          = !validator.isEmpty(params.documento)
+            var validate_cp                 = !validator.isEmpty(params.cp)
         } catch (err) {
             return res.status(200).send({
                 status: "error",
@@ -37,19 +38,20 @@ var controller = {
 
 
 
-        if (validate_name && validate_apellido && validate_email && validate_password && validate_confirmpassword && validate_telefono && validate_pais && validate_provincia && validate_documento) {
+        if (validate_name && validate_apellido && validate_email && validate_password && validate_confirmpassword && validate_telefono && validate_pais && validate_provincia && validate_documento && validate_cp) {
             //Crear el objeto a guardar
             var user = new UserCliente();
 
             //Asignar valores al objeto
-            user.name = params.name;
-            user.apellido = params.apellido;
-            user.email = params.email;
-            user.password = params.password;
-            user.telefono = params.telefono;
-            user.pais = params.pais;
-            user.provincia = params.provincia;
-            user.documento = params.documento;
+            user.name       =    params.name;
+            user.apellido   =    params.apellido;
+            user.email      =    params.email;
+            user.password   =    params.password;
+            user.telefono   =    params.telefono;
+            user.pais       =    params.pais;
+            user.provincia  =    params.provincia;
+            user.documento  =    params.documento;
+            user.cp         =    params.cp;
 
             user.password = await user.encryptPassword(user.password) //Para encriptar la contraseña
 

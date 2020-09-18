@@ -17,6 +17,7 @@ export default class Perfil extends Component {
         pais: "",
         provincia: "",
         documento: "",
+        cp: "",
         token: false,
         list: false
     }
@@ -27,23 +28,7 @@ export default class Perfil extends Component {
         console.log("El valor del token obtenido es: ", token)
 
 
-        axiosCreate('/perfil/1', { headers: { 'token': localStorage.getItem('token') } })
-            .then((res) => {
-                this.setState({
-                    name: res.data.name,
-                    apellido: res.data.apellido,
-                    email: res.data.email,
-                    _id: res.data._id,
-                    telefono: res.data.telefono,
-                    pais: res.data.pais,
-                    provincia: res.data.provincia,
-                    documento: res.data.documento,
-                    token: true
-                })
-            }).catch((err) => { console.log("El error es :", err) })
-
-
-            await axiosCreateUser('/perfil/1', { headers: { 'token': localStorage.getItem('token') } })
+        await axiosCreateUser('/perfil/1', { headers: { 'token': localStorage.getItem('token') } })
             .then((res) => {
 
                 this.setState({
@@ -55,6 +40,7 @@ export default class Perfil extends Component {
                     pais: res.data.pais,
                     provincia: res.data.provincia,
                     documento: res.data.documento,
+                    cp: res.data.cp,
                     token: true
                 })
             }).catch((err) => { console.log("El error es :", err) })
@@ -135,6 +121,10 @@ export default class Perfil extends Component {
 
                                 <h5 className="d-inline-flex mt-2">Provincia: </h5>
                                 <p className="d-inline-flex ml-3">{this.state.provincia}</p>
+                                <hr />
+
+                                <h5 className="d-inline-flex mt-2">Código Postal: </h5>
+                                <p className="d-inline-flex ml-3">{this.state.cp}</p>
                                 <hr />
 
                                 <h5 className="d-inline-flex mt-2">Documento: </h5>

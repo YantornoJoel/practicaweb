@@ -10,7 +10,7 @@ export default class Configuracion extends Component {
         $("#usuario").toggleClass('modooscuro-sidebar');
         $(".sidebar span ").toggleClass('modooscuro-sidebar');
         $(".sidebar i ").toggleClass('modooscuro-sidebar');
-       
+        $("header").toggleClass('modooscuro-content')
         
     })
     }

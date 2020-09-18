@@ -383,3 +383,9 @@ body{
   border: 1px solid rgb(196, 196, 196)
 }
 
+.upload-image{
+  display: block;
+  margin-left: 350px;
+  margin-bottom: 30px;
+  min-width: 340px;
+}

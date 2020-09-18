@@ -18,7 +18,10 @@ body{
 .modooscuro-sidebar:hover{
   color: green;
 }
-
+.modooscuro-content{
+  background: blue;
+  color: red;
+}
 
 header{
     /* position: fixed;  */

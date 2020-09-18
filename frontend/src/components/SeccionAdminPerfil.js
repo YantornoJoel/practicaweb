@@ -79,7 +79,7 @@ export default class SeccionAdminPerfil extends Component {
     deleteUser = async (id) => {
         await axios.delete('http://localhost:3900/user/delete/' + id)
         this.getUsers();
-        this.props.history.push("/api/");
+        this.props.history.push("/");
     }
 
 
